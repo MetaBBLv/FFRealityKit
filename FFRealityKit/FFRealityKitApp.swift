@@ -11,7 +11,7 @@ import SwiftUI
 struct FFRealityKitApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FFARView()
         }
     }
 }

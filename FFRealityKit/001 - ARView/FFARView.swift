@@ -19,6 +19,12 @@ import SwiftUI
 import RealityKit
 import ARKit
 
+//MARK: - 父类ARViewBase
+//关于ARView的父类ARViewBase，实质上是UIView或NSView，分别对应iOS和mac平台，是UIView的一个别名
+//typealias ARViewBase = UIView
+
+//MARK: - ARView的两种常规初始化
+//常规序列化
 struct FFARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> some UIView {
         //初始化ARView
@@ -40,6 +46,35 @@ struct FFARViewContainer: UIViewRepresentable {
     }
 }
 
+//指定更多参数序列化
+//init(frame:cameraMode:automaticallyConfigureSession:)
+//- frame： 以point为单位测量
+//- cameraMode： 指示是使用设备摄像头还是虚拟摄像头
+//- automcallyConfigureSession：指示是否使用AR会话，该会话配置会根据相机模式和场景锚自动更新。如果希望使用自己的配置手动运行，将值设定为false
+struct FFARViewArgumentContainer: UIViewRepresentable {
+    func makeUIView(context: Context) -> some UIView {
+        //初始化ARView
+        let arView = ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true)
+        //创建一个scene实例
+        let scene = arView.scene
+        //在scene中创建一个entity
+        let entity = ModelEntity(mesh: .generateBox(size: 1), materials: [SimpleMaterial(color: .red, isMetallic: false)])
+        //创建AnchorEntity并将ModelEntity添加到其中。
+        let anchorEntity = AnchorEntity(world: [0,0,-0.5])
+        anchorEntity.addChild(entity)
+        //将anchorEntity添加到场景的锚点集合中
+        scene.anchors.append(anchorEntity)
+        return arView
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+}
+
+//MARK: - ARView的Property
+
+
 struct FFARView: View {
     
     var body: some View {
@@ -55,6 +90,9 @@ struct FFARView: View {
                 .frame(width: 300, height: 300)
             
             Text("ARView Below")
+            Divider()
+            FFARViewArgumentContainer()
+                .frame(width: 300, height: 300)
         }
     }
 }
