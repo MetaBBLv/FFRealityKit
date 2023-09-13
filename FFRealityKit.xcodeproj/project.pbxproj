@@ -12,6 +12,8 @@
 		876E6D222AAC24AA00DD87A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876E6D212AAC24AA00DD87A9 /* Assets.xcassets */; };
 		876E6D252AAC24AA00DD87A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876E6D242AAC24AA00DD87A9 /* Preview Assets.xcassets */; };
 		876E6D2D2AAC278E00DD87A9 /* FFARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E6D2C2AAC278E00DD87A9 /* FFARView.swift */; };
+		877CAF682AB05134007A8CA8 /* FFARViewArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877CAF672AB05134007A8CA8 /* FFARViewArgument.swift */; };
+		87984E2A2AB155FE00BFF2B7 /* FFARViewScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87984E292AB155FE00BFF2B7 /* FFARViewScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		876E6D212AAC24AA00DD87A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		876E6D242AAC24AA00DD87A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		876E6D2C2AAC278E00DD87A9 /* FFARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFARView.swift; sourceTree = "<group>"; };
+		877CAF672AB05134007A8CA8 /* FFARViewArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFARViewArgument.swift; sourceTree = "<group>"; };
+		87984E292AB155FE00BFF2B7 /* FFARViewScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFARViewScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				876E6D2C2AAC278E00DD87A9 /* FFARView.swift */,
+				877CAF672AB05134007A8CA8 /* FFARViewArgument.swift */,
+				87984E292AB155FE00BFF2B7 /* FFARViewScene.swift */,
 			);
 			path = "001 - ARView";
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 			files = (
 				876E6D202AAC24A900DD87A9 /* ContentView.swift in Sources */,
 				876E6D2D2AAC278E00DD87A9 /* FFARView.swift in Sources */,
+				87984E2A2AB155FE00BFF2B7 /* FFARViewScene.swift in Sources */,
+				877CAF682AB05134007A8CA8 /* FFARViewArgument.swift in Sources */,
 				876E6D1E2AAC24A900DD87A9 /* FFRealityKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.meta.bblv.FFRealityKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meta.bblv.FFRealityKit1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -328,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.meta.bblv.FFRealityKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meta.bblv.FFRealityKit1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
